@@ -53,31 +53,3 @@ class UserProfileActivity : AppCompatActivity(), View.OnClickListener, UserProfi
         // some irrelevant code
     }
 }
-
-interface UserProfileView {
-
-    fun showConfirmLogoutDialog()
-}
-
-interface UserProfilePresenter {
-
-    fun onLogoutClicked()
-
-    fun onLogoutConfirmed()
-
-    fun getUser(): User
-}
-
-interface CardInfoApi {
-
-    fun getCardInfoById(id: String): Observable<CardInfo>
-}
-
-class User(
-    val id: String,
-    val name: String
-)
-
-data class CardInfo(
-    val info: String
-)
