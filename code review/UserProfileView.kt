@@ -1,0 +1,4 @@
+interface UserProfileView {
+
+    fun showConfirmLogoutDialog()
+}
